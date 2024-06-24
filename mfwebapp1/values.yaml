@@ -1,0 +1,3 @@
+ingressName: nginx-project-ingress
+appName: nginx-project
+dns: hello-world.example
