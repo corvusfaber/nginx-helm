@@ -53,68 +53,13 @@ dns: myapp.example.com
 
 Defines the Kubernetes Service that exposes the Nginx application.
 
-```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: {{ .Values.appName }}
-spec:
-  ports:
-    - port: 80
-  selector:
-    app: {{ .Values.appName }}
-```
-
 ### `templates/deployment.yaml`
 
 Defines the Kubernetes Deployment that runs the Nginx application.
 
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: {{ .Values.appName }}
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: {{ .Values.appName }}
-  template:
-    metadata:
-      labels:
-        app: {{ .Values.appName }}
-    spec:
-      containers:
-        - name: nginx
-          image: nginx:1.17.3
-          ports:
-            - containerPort: 80
-```
-
 ### `templates/ingress.yaml`
 
 Defines the Kubernetes Ingress that exposes the Nginx application externally.
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: {{ .Values.ingressName }}
-  namespace: development
-spec:
-  ingressClassName: nginx
-  rules:
-    - host: {{ .Values.dns }}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: {{ .Values.appName }}
-                port:
-                  number: 80
-```
 
 ## Usage
 
