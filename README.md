@@ -1,6 +1,3 @@
-Sure! Here's the updated `README.md` file including the Ingress resource:
-
-```markdown
 # MyApp Helm Chart
 
 This Helm chart deploys a simple Nginx application on Kubernetes using a Service, Deployment, and Ingress.
