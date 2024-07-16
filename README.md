@@ -1,5 +1,3 @@
-Sure! Here's the updated `README.md` file including the Ingress resource:
-
 ```markdown
 # MyApp Helm Chart
 
