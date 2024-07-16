@@ -144,9 +144,6 @@ To uninstall/delete the `<release-name>` deployment:
 helm uninstall <release-name>
 ```
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
 
 Replace `<repository-url>` and `<repository-directory>` with the actual URL and directory name of your repository. This `README.md` now includes the Ingress configuration and instructions on how to access the application externally.
