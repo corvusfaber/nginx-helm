@@ -1,4 +1,4 @@
-```markdown
+
 # MyApp Helm Chart
 
 This Helm chart deploys a simple Nginx application on Kubernetes using a Service, Deployment, and Ingress.
